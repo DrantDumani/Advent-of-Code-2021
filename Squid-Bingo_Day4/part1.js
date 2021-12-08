@@ -59,7 +59,6 @@ function findNum(num, board){
   for (let i = 0; i < 5; i++){
     for (let j = 0; j < 5; j++){
       if (board[i][j] === num) {
-        // store.push(Number(num))
         board[i][j] = "m"
         return [i,j]
       }
