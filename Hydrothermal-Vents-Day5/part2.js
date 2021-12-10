@@ -4,7 +4,6 @@ const raw = fs.readFileSync("lineSegments.txt", "utf8")
 const segments = raw.replace(/(\s->\s|\r)/g, (match, m1) => {
 	return m1 === " -> " ? "," : ""
 }).split('\n').map(str => str.split(",").map(el => Number(el)))
-// .filter(seg => seg[0] === seg[2] || seg[1] === seg[3])
 
 function findOverlaps(coords){
 	const ocean = []
